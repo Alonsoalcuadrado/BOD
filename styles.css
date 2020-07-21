@@ -165,3 +165,94 @@ section.hero > img {
 }
 
 /* Styles for hero section ends */
+
+/* Styles for what is Brillamont On Demand begins */
+
+section.what-is-bod {
+  width: 100%;
+  height: 100%;
+  padding: var(--default-padding);
+  background-color: var(--main-color);
+}
+
+section.article-pages {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 48px;
+  margin-bottom: 32px;
+}
+
+section.article-pages a.article-page__title {
+  padding: 16px 24px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: white;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+section.what-is-bod section.bod-description-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.what-is-bod section.bod-description-container article.bod-description {
+  width: 55%;
+  height: 388px;
+}
+
+section.bod-description-container article.bod-description h4.bod-description__title {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+
+section.bod-description-container article.bod-description p.bod-description__text {
+  width: 97%;
+  height: 120px;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+section.bod-description-container article.bod-description section.bod-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px 0;
+}
+
+article.bod-description section.bod-benefits article.bod-benefit-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 32px;
+}
+
+section.bod-benefits article.bod-benefit-container img.bod-benefit__image {
+  margin-right: 16px;
+}
+
+section.bod-benefits article.bod-benefit-container p.bod-benefit__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+section.what-is-bod section.bod-description-container img.bod-description__image {
+  margin-right: 24px;
+  box-shadow: 24px -24px 0 var(--orange-bg);
+}
+
+/* Styles for what is Brillamont On Demand ends */
