@@ -1,0 +1,112 @@
+/* Set variables to use in this document */
+:root {
+  --main-text: 'Montserrat', sans-serif;
+
+  --main-color: #211d72;
+  --secondary-color: #07b0e4;
+  --footer-color: #150046;
+  --navbar-color: #272476;
+  --black-text-color: #555555;
+  --orange-bg: #f39208;
+  --orange-highlight: #ff8d3d;
+  --orange-light: #fdddb0;
+  --white-color: white;
+
+  --default-padding: 80px 128px;
+}
+
+/* reset margins and paddings, and set font-family "Montserrat" as default and general styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-text);
+}
+
+section h2.section-title {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 80px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: white;
+}
+
+.page-selected {
+  color: var(--orange-highlight) !important;
+  border-bottom: 2px solid var(--orange-bg) !important;
+}
+
+.title-center {
+  padding-left: 128px !important;
+}
+
+.page-center {
+  width: 100% !important;
+  justify-content: center;
+}
+
+/* Styles for header and navbar begins */
+
+header.navbar {
+  width: 100%;
+  height: 100px;
+  padding: 0 128px;
+  background-color: var(--navbar-color);
+  position: fixed;
+}
+
+header.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+ul.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+ul.navbar-links > li {
+  margin-right: 40px;
+}
+
+ul.navbar-links > li:hover:not(:last-child) {
+  border-bottom: 1px solid var(--orange-bg);
+}
+
+ul.navbar-links > li:last-child {
+  margin-right: 0;
+}
+
+ul.navbar-links > li > a {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--white-color);
+}
+
+ul.navbar-links > li:last-child > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background-color: var(--orange-bg);
+}
+
+ul.navbar-links > li:hover > a {
+  font-weight: 600;
+}
+
+/* Styles for header and navbar ends */
