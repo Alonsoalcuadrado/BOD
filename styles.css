@@ -326,3 +326,28 @@ section.how-it-works section.steps-container article.step:first-child {
 }
 
 /* Styles for how it works section ends */
+
+/* Styles for starts now begins */
+
+section.starts-now {
+  width: 100%;
+  height: 100%;
+  padding: var(--default-padding);
+  background: url('assets/bg-images/small_triangle.png') no-repeat 5% 12%, url('assets/bg-images/small_diamond.png') no-repeat 98% 9%,
+    url('assets/bg-images/small_mid_ring.png') no-repeat 0 880px, url('assets/bg-images/small_gray_spring.png') no-repeat 96% 98% var(--main-color);
+}
+
+section.starts-now article.form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+section.starts-now article.form-container iframe.form-container__content {
+  border: none;
+  background-color: #dee0ee;
+  box-shadow: -40px -40px 0 var(--orange-bg), -40px 40px 0 var(--orange-bg);
+}
+
+/* Styles for starts now ends */
