@@ -256,3 +256,73 @@ section.what-is-bod section.bod-description-container img.bod-description__image
 }
 
 /* Styles for what is Brillamont On Demand ends */
+
+/* Styles for how it works section begins */
+
+section.how-it-works {
+  width: 100%;
+  height: 100%;
+  padding: 80px 128px 80px 0;
+  color: white;
+  background: url('assets/bg-images/small_shapes.png') no-repeat 100% 0 var(--main-color);
+}
+
+section.how-it-works section.steps-container {
+  display: flex;
+  align-items: center;
+  height: 500px;
+  margin-left: -128px;
+  /* background-color: var(--orange-bg); */
+  background-color: white;
+}
+
+section.how-it-works section.steps-container article.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 48px;
+  border-top: 4px solid var(--orange-light);
+  background-color: var(--orange-bg);
+}
+
+section.how-it-works section.steps-container article.step:first-child {
+  padding-left: 128px;
+}
+
+section.how-it-works section.steps-container article.step:nth-child(even) {
+  background-color: #f4a42f;
+}
+
+section.steps-container article.step img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 48px;
+}
+
+section.steps-container article.step h3.step__title {
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+section.steps-container article.step p.step__text {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section.steps-container article.step p.step__text--big {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+section.how-it-works section.steps-container article.step:first-child {
+  margin-left: 128px;
+}
+
+/* Styles for how it works section ends */
