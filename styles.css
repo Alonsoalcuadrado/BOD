@@ -80,6 +80,11 @@ header.navbar nav {
   height: 100%;
 }
 
+img.brand-logo {
+  width: 200px;
+  height: 40px;
+}
+
 ul.navbar-links {
   display: flex;
   align-items: center;
