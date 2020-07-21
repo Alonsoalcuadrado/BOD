@@ -110,3 +110,58 @@ ul.navbar-links > li:hover > a {
 }
 
 /* Styles for header and navbar ends */
+
+/* Styles for hero section begins */
+
+section.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 250px 128px 80px;
+  background: url('assets/bg-images/small_spring.png') 0 195px no-repeat, url('assets/bg-images/small_ring.png') 59% 530px no-repeat,
+    url('assets/bg-images/small_tube.png') var(--main-color) 100% 200px no-repeat;
+}
+
+article.hero-welcome {
+  width: 60%;
+  height: 300px;
+  color: white;
+}
+
+article.hero-welcome h1.hero-welcome__title {
+  width: 100%;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+}
+
+article.hero-welcome p.hero-welcome__text {
+  width: 78%;
+  height: 80px;
+  margin-bottom: 32px;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #bababa;
+}
+
+article.hero-welcome a.hero-welcome__button {
+  text-decoration: none;
+  padding: 12px 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  background-color: var(--orange-bg);
+  border-radius: 10px;
+  color: white;
+}
+
+section.hero > img {
+  padding-right: 20px;
+}
+
+/* Styles for hero section ends */
