@@ -413,3 +413,54 @@ section.dues h4.caption {
 }
 
 /* Styles for dues ends */
+
+/* Styles for FAQ's begins */
+
+section.faqs {
+  width: 100%;
+  height: 100%;
+  padding: var(--default-padding);
+  color: white;
+  background: url('assets/bg-images/small_mid_yellow_ring.png') no-repeat 100% 1615px var(--main-color);
+}
+
+section.faqs article.faq-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0;
+  padding: 16px 24px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--orange-bg);
+}
+
+section.faqs article.faq-box h3.faq-box__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+section.faqs article.faq-box p.faq-box__text {
+  width: 90%;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.box-uncollapsed {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  background-color: var(--secondary-color) !important;
+}
+
+.box-uncollapsed__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Styles for FAQ's ends */
