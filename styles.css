@@ -507,3 +507,53 @@ section.doubts p.doubts__email {
 }
 
 /* Styles for doubts ends */
+
+/* Styles for footer begins */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: var(--default-padding);
+  color: white;
+  background-color: var(--footer-color);
+}
+
+footer section.brand img,
+footer section.social-media p {
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: right;
+}
+
+footer section.brand p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+footer section.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+footer section.social-media a {
+  margin-right: 18px;
+}
+
+footer section.social-media a:last-child {
+  margin-right: 0;
+}
+
+footer section.social-media a img {
+  padding: 2.25px;
+  border-radius: 5px;
+  background-color: var(--orange-bg);
+}
+
+/* Styles for footer ends */
