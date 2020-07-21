@@ -39,11 +39,12 @@
   <section class="what-is-bod">
     <h2 class="section-title">¿Qué es Brillamont On Demand?</h2>
     <section class="article-pages">
-      <a class="article-page__title page-selected">Homeschool</a>
-      <a class="article-page__title">Homegroups</a>
-      <a class="article-page__title">Classic On Line</a>
+      <a id="wibHomeschool" class="article-page__title page-selected">Homeschool</a>
+      <a id="wibHomegroups" class="article-page__title">Homegroups</a>
+      <a id="wibClassicOnline" class="article-page__title">Classic Online</a>
     </section>
-    <section class="bod-description-container">
+
+    <section id="hsDescription" class="bod-description-container">
       <article class="bod-description">
         <h4 class="bod-description__title">Sabemos que muchas familias disfrutan de llevar la educación en casa y hacer
           de
@@ -67,7 +68,7 @@
             <img class="bod-benefit__image" src="assets/icons/ic_star.svg" alt="Brillamont on demand benefit icon">
             <p class="bod-benefit__text">Excelencia académica</p>
           </article>
-          <article class="bod-benefit-container">
+          <article class="bod-benefit-container benefit-top">
             <img class="bod-benefit__image" src="assets/icons/ic_parents.svg" alt="Brillamont on demand benefit icon">
             <p class="bod-benefit__text">Podemos apoyar en la capacitación de quien se encargue del proceso de
               aprendizaje del alumno</p>
@@ -76,6 +77,82 @@
             <img class="bod-benefit__image" src="assets/icons/ic_checkmark-square.svg"
               alt="Brillamont on demand benefit icon">
             <p class="bod-benefit__text">Check-ins semanales</p>
+          </article>
+        </section>
+      </article>
+      <img class="bod-description__image" src="assets/images/small_student.png" alt="Student image">
+    </section>
+
+    <section style="display: none;" id="hgDescription" class="bod-description-container">
+      <article class="bod-description">
+        <h4 class="bod-description__title">Dirigido a las familias que prefieren llevar la educación a través de
+          pequeños
+          grupos o comunidades, formadas por
+          alumnos de distintas familias y de la misma o diferente edad.</h4>
+        <p class="bod-description__text">En la modalidad HomeGroups, ponemos a su disposición un coach
+          académico encargado de la impartición de nuestro currículum educativo de
+          calidad, para ser cursado en este formato de pequeños grupos o
+          micro-escuelas, el cual permite recibir certificado Brillamont con validez SEP
+          para quienes cursen y aprueben este programa.</p>
+        <section class="bod-benefits">
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_idea.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Coach académico</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_users.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Hasta tres grados en un solo grupo</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_certificate.svg"
+              alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Programa y certificación Brillamont</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_price.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Costo dinámico según el número de alumnos</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_star.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Excelencia académica</p>
+          </article>
+        </section>
+      </article>
+      <img class="bod-description__image" src="assets/images/small_student.png" alt="Student image">
+    </section>
+
+    <section style="display: none;" id="coDescription" class="bod-description-container">
+      <article class="bod-description">
+        <h4 class="bod-description__title">Una estratégica adaptación de nuestro sistema clásico, ¡ahora en línea! Ideal
+          para todas las familias que prefieren lo
+          tradicional.</h4>
+        <p class="bod-description__text">El currículum educativo Brillamont de calidad, y con validez SEP, es llevado
+          completamente en línea con clases en vivo y grabadas en formato virtual, en
+          las cuales los alumnos accederán al contenido impartido por el maestro.
+          Además, contarán con el apoyo y monitoreo de un coach académico, quien
+          estará al pendiente de sus avances.</p>
+        <section class="bod-benefits">
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_computer.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Programa académico en formato online</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_checkmark-square.svg"
+              alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Check-ins semanales o quincenales</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_certificate.svg"
+              alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Certificación Brillamont</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_users.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Grupos virtuales</p>
+          </article>
+          <article class="bod-benefit-container">
+            <img class="bod-benefit__image" src="assets/icons/ic_star.svg" alt="Brillamont on demand benefit icon">
+            <p class="bod-benefit__text">Excelencia académica</p>
           </article>
         </section>
       </article>
@@ -278,6 +355,7 @@
     </section>
   </footer>
 
+  <script src="index.js"></script>
 </body>
 
 </html>
