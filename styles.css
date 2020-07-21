@@ -41,7 +41,12 @@ section h2.section-title {
 
 .page-selected {
   color: var(--orange-highlight) !important;
-  border-bottom: 2px solid var(--orange-bg) !important;
+  border-bottom: 4px solid var(--orange-bg) !important;
+}
+
+.page-selected--blue {
+  color: var(--main-color) !important;
+  border-bottom: 4px solid var(--main-color) !important;
 }
 
 .title-center {
@@ -391,6 +396,19 @@ section.dues article.prices-table table {
   background-color: white;
 }
 
+.full-table {
+  width: 100% !important;
+}
+
+.less-space {
+  width: 0 !important;
+  padding-left: 16px !important;
+}
+
+.lowercase {
+  text-transform: capitalize !important;
+}
+
 article.prices-table table thead tr {
   height: 48px;
   font-weight: 500;
@@ -403,7 +421,6 @@ article.prices-table table thead tr {
 
 article.prices-table table tr {
   height: 56px;
-  text-transform: uppercase;
   color: var(--black-text-color);
 }
 
@@ -411,6 +428,11 @@ article.prices-table table td,
 article.prices-table table th {
   width: 55%;
   padding-left: 32px;
+}
+
+article.prices-table table td {
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 section.dues h4.caption {

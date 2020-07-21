@@ -1,46 +1,89 @@
+/* What is Brillamont On Demand section page selection buttons */
 const wibHomeschool = document.querySelector('#wibHomeschool');
 const wibHomegroups = document.querySelector('#wibHomegroups');
 const wibClassicOnline = document.querySelector('#wibClassicOnline');
 
+/* What is Brillamont On Demand section content */
 const hsSection = document.querySelector('#hsDescription');
 const hgSection = document.querySelector('#hgDescription');
 const coSection = document.querySelector('#coDescription');
 
-let pagePosition = 0;
+/* Dues section page selection buttons */
+const duesHomeschool = document.querySelector('#duesHomeschool');
+const duesHomegroups = document.querySelector('#duesHomegroups');
+const duesClassic = document.querySelector('#duesClassic');
+
+/* Dues section content */
+const homeschoolTable = document.querySelector('#homeschoolTable');
+const homegroupsTable = document.querySelector('#homegroupsTable');
+const classicTable = document.querySelector('#classicTable');
+
+let descriptionPosition = 0;
+let tablePosition = 0;
 
 wibHomeschool.addEventListener('click', pageSelected);
 wibHomegroups.addEventListener('click', pageSelected);
 wibClassicOnline.addEventListener('click', pageSelected);
 
+duesHomeschool.addEventListener('click', pageSelected);
+duesHomegroups.addEventListener('click', pageSelected);
+duesClassic.addEventListener('click', pageSelected);
+
 function pageSelected(event) {
   switch (event.target.id) {
     case 'wibHomeschool':
-      pagePosition = 0;
+      descriptionPosition = 0;
 
       break;
     case 'wibHomegroups':
-      pagePosition = 1;
+      descriptionPosition = 1;
 
       break;
     case 'wibClassicOnline':
-      pagePosition = 2;
+      descriptionPosition = 2;
+
+      break;
+    case 'duesHomeschool':
+      tablePosition = 0;
+
+      break;
+    case 'duesHomegroups':
+      tablePosition = 1;
+
+      break;
+    case 'duesClassic':
+      tablePosition = 2;
 
       break;
 
     default:
       break;
   }
-  buttonPressed(pagePosition, 0, wibHomeschool, hsSection);
-  buttonPressed(pagePosition, 1, wibHomegroups, hgSection);
-  buttonPressed(pagePosition, 2, wibClassicOnline, coSection);
+
+  descriptionSelection(descriptionPosition, 0, wibHomeschool, hsSection);
+  descriptionSelection(descriptionPosition, 1, wibHomegroups, hgSection);
+  descriptionSelection(descriptionPosition, 2, wibClassicOnline, coSection);
+  tableSelection(tablePosition, 0, duesHomeschool, homeschoolTable);
+  tableSelection(tablePosition, 1, duesHomegroups, homegroupsTable);
+  tableSelection(tablePosition, 2, duesClassic, classicTable);
 }
 
-function buttonPressed(pagePosition, number, pageName, element) {
-  if (pagePosition === number) {
+function descriptionSelection(descriptionPosition, number, pageName, element) {
+  if (descriptionPosition === number) {
     pageName.classList.add('page-selected');
     element.style.display = 'flex';
   } else {
     pageName.classList.remove('page-selected');
+    element.style.display = 'none';
+  }
+}
+
+function tableSelection(tablePosition, number, pageName, element) {
+  if (tablePosition === number) {
+    pageName.classList.add('page-selected--blue');
+    element.style.display = 'flex';
+  } else {
+    pageName.classList.remove('page-selected--blue');
     element.style.display = 'none';
   }
 }
