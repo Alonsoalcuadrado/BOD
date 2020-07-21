@@ -17,6 +17,10 @@
 
 /* reset margins and paddings, and set font-family "Montserrat" as default and general styles*/
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
