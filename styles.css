@@ -351,3 +351,65 @@ section.starts-now article.form-container iframe.form-container__content {
 }
 
 /* Styles for starts now ends */
+
+/* Styles for dues begins */
+
+section.dues {
+  width: 100%;
+  height: 100%;
+  padding: var(--default-padding);
+  color: white;
+  background: url('assets/bg-images/small_mid_ring.png') no-repeat 0 -80px var(--secondary-color);
+}
+
+section.dues h3.section-subtitle {
+  width: 100%;
+  margin: 48px 0;
+  text-align: center;
+}
+
+section.dues article.prices-table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+section.dues article.prices-table table {
+  width: 350px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+article.prices-table table thead tr {
+  height: 48px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: white;
+  background-color: var(--orange-bg);
+}
+
+article.prices-table table tr {
+  height: 56px;
+  text-transform: uppercase;
+  color: var(--black-text-color);
+}
+
+article.prices-table table td,
+article.prices-table table th {
+  width: 55%;
+  padding-left: 32px;
+}
+
+section.dues h4.caption {
+  width: 100%;
+  margin: 32px 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* Styles for dues ends */
