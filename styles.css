@@ -458,13 +458,10 @@ section.faqs {
   height: 100%;
   padding: var(--default-padding);
   color: white;
-  background: url('assets/bg-images/small_mid_yellow_ring.png') no-repeat 100% 1615px var(--main-color);
+  background: var(--main-color);
 }
 
 section.faqs article.faq-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: 24px 0;
   padding: 16px 24px;
   width: 100%;
@@ -493,11 +490,22 @@ section.faqs article.faq-box p.faq-box__text {
   background-color: var(--secondary-color) !important;
 }
 
+.faq-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .box-uncollapsed__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+article.faq-box img {
+  cursor: pointer;
 }
 
 /* Styles for FAQ's ends */
@@ -508,8 +516,7 @@ section.doubts {
   width: 100%;
   height: 100%;
   padding: var(--default-padding);
-  background: url('assets/bg-images/small_mid_yellow_ring.png') no-repeat 100% -113px,
-    url('assets/bg-images/small_polygon.png') no-repeat 0 0 var(--main-color);
+  background: url('assets/bg-images/small_polygon.png') no-repeat 0 0 var(--main-color);
 }
 
 section.doubts h2.section-title--doubts {
@@ -529,15 +536,18 @@ section.doubts p.doubts__text {
   color: #bababa;
 }
 
-section.doubts p.doubts__email {
+section.doubts a.doubts__email {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  text-decoration: none;
   color: var(--orange-bg);
 }
 
 section.doubts p.doubts__text,
-section.doubts p.doubts__email {
+section.doubts a.doubts__email {
+  display: flex;
+  justify-content: center;
   width: 100%;
   text-align: center;
   margin: 24px 0;
@@ -585,12 +595,6 @@ footer section.social-media a {
 
 footer section.social-media a:last-child {
   margin-right: 0;
-}
-
-footer section.social-media a img {
-  padding: 2.25px;
-  border-radius: 5px;
-  background-color: var(--orange-bg);
 }
 
 /* Styles for footer ends */

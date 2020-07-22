@@ -18,6 +18,11 @@ const homeschoolTable = document.querySelector('#homeschoolTable');
 const homegroupsTable = document.querySelector('#homegroupsTable');
 const classicTable = document.querySelector('#classicTable');
 
+/* FAQs section selectors */
+const faqMore = document.querySelectorAll('.more-info');
+const faqLess = document.querySelectorAll('.less-info');
+const faqText = document.querySelectorAll('.faq-box__text');
+
 let descriptionPosition = 0;
 let tablePosition = 0;
 
@@ -28,6 +33,26 @@ wibClassicOnline.addEventListener('click', pageSelected);
 duesHomeschool.addEventListener('click', pageSelected);
 duesHomegroups.addEventListener('click', pageSelected);
 duesClassic.addEventListener('click', pageSelected);
+
+for (let element = 0; element < faqMore.length; element++) {
+  const moreInfo = faqMore[element];
+  const lessInfo = faqLess[element];
+  const text = faqText[element];
+
+  moreInfo.addEventListener('click', (event) => {
+    moreInfo.style.display = 'none';
+    lessInfo.style.display = 'flex';
+    text.style.display = 'flex';
+    event.path[2].classList.add('box-uncollapsed');
+  });
+
+  lessInfo.addEventListener('click', (event) => {
+    moreInfo.style.display = 'flex';
+    lessInfo.style.display = 'none';
+    text.style.display = 'none';
+    event.path[2].classList.remove('box-uncollapsed');
+  });
+}
 
 function pageSelected(event) {
   switch (event.target.id) {
