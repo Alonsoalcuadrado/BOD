@@ -12,7 +12,7 @@
   --orange-light: #fdddb0;
   --white-color: white;
 
-  --default-padding: 80px 128px;
+  --default-padding: 90px 128px;
 }
 
 /* reset margins and paddings, and set font-family "Montserrat" as default and general styles*/
@@ -70,6 +70,11 @@ header.navbar {
   padding: 0 128px;
   background-color: var(--navbar-color);
   position: fixed;
+  transition-duration: 0.3s;
+}
+
+.less-navbar {
+  height: 70px !important;
 }
 
 header.navbar nav {
@@ -119,12 +124,22 @@ ul.navbar-links > li:last-child > a {
   align-items: center;
   justify-content: center;
   padding: 12px 18px;
+  font-weight: bold;
   border-radius: 10px;
   background-color: var(--orange-bg);
 }
 
 ul.navbar-links > li:hover > a {
   font-weight: 600;
+}
+
+.link-selected {
+  border-bottom: 2px solid var(--orange-bg) !important;
+}
+
+.link-active {
+  font-weight: 600 !important;
+  color: var(--orange-bg) !important;
 }
 
 /* Styles for header and navbar ends */
@@ -169,7 +184,7 @@ article.hero-welcome p.hero-welcome__text {
 article.hero-welcome a.hero-welcome__button {
   text-decoration: none;
   padding: 12px 40px;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -211,6 +226,7 @@ section.article-pages a.article-page__title {
   border-bottom: 2px solid white;
   text-transform: uppercase;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 section.what-is-bod section.bod-description-container {
@@ -367,7 +383,7 @@ section.starts-now article.form-container {
 section.starts-now article.form-container iframe.form-container__content {
   border: none;
   background-color: #dee0ee;
-  box-shadow: -40px -40px 0 var(--orange-bg), -40px 40px 0 var(--orange-bg);
+  /* box-shadow: -40px -40px 0 var(--orange-bg), -40px 40px 0 var(--orange-bg); */
 }
 
 /* Styles for starts now ends */
@@ -379,10 +395,13 @@ section.dues {
   height: 100%;
   padding: var(--default-padding);
   color: white;
-  background: url('assets/bg-images/small_mid_ring.png') no-repeat 0 -80px var(--secondary-color);
+  background: url('assets/bg-images/small_mid_ring.png') no-repeat 0 -100px var(--secondary-color);
 }
 
 section.dues h3.section-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin: 48px 0;
   text-align: center;
@@ -435,9 +454,13 @@ article.prices-table table th {
   padding-left: 32px;
 }
 
-article.prices-table table td {
+article.prices-table table td:first-child {
   font-weight: 500;
   text-transform: uppercase;
+}
+
+article.prices-table table tr:nth-child(even) {
+  background-color: rgba(204, 204, 204, 0.24);
 }
 
 section.dues h4.caption {

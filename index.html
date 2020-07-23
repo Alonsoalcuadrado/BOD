@@ -11,16 +11,17 @@
 </head>
 
 <body>
-  <header class="navbar">
+
+  <header id="navbar" class="navbar">
     <nav>
       <a href="#home"><img class="brand-logo" src="assets/images/logo_small.png"
           alt="Brillamont on demand navbar logo"></a>
       <ul class="navbar-links">
-        <li><a href="#what-is-bod">¿Qué es?</a></li>
-        <li><a href="#how-it-works">¿Cómo funciona?</a></li>
-        <li><a href="#dues">Admisiones</a></li>
-        <li><a href="#faqs">Preguntas frecuentes</a></li>
-        <li><a href="#starts-now">COMENZAR</a></li>
+        <li class="navbar-element"><a class="navbar-link" href="#what-is-bod">¿Qué es?</a></li>
+        <li class="navbar-element"><a class=" navbar-link" href="#how-it-works">¿Cómo funciona?</a></li>
+        <li class="navbar-element"><a class=" navbar-link" href="#dues">Cuotas</a></li>
+        <li class="navbar-element"><a class=" navbar-link" href="#faqs">Preguntas frecuentes</a></li>
+        <li class="navbar-element"><a class=" navbar-link" href="#starts-now">COMENZAR</a></li>
       </ul>
     </nav>
   </header>
@@ -81,7 +82,7 @@
           </article>
         </section>
       </article>
-      <img class="bod-description__image" src="assets/images/small_student.png" alt="Student image">
+      <img class="bod-description__image" src="assets/images/small_student_boy.png" alt="Student image">
     </section>
 
     <section style="display: none;" id="hgDescription" class="bod-description-container">
@@ -119,7 +120,7 @@
           </article>
         </section>
       </article>
-      <img class="bod-description__image" src="assets/images/small_student.png" alt="Student image">
+      <img class="bod-description__image" src="assets/images/small_student_baby.png" alt="Student image">
     </section>
 
     <section style="display: none;" id="coDescription" class="bod-description-container">
@@ -157,7 +158,7 @@
           </article>
         </section>
       </article>
-      <img class="bod-description__image" src="assets/images/small_student.png" alt="Student image">
+      <img class="bod-description__image" src="assets/images/small_student_girl.png" alt="Student image">
     </section>
   </section>
 
@@ -209,7 +210,8 @@
       <a id="duesHomegroups" class="article-page__title">Homegroups</a>
       <a id="duesClassic" class="article-page__title">Classic Online</a>
     </section>
-    <h3 class="section-subtitle">Inscripción por alumno $ 5,000</h3>
+    <h3 id="duesPerStudent" class="section-subtitle">Inscripción por alumno $ 5,000</h3>
+    <h3 style="display: none;" id="duesDiscount" class="section-subtitle">El costo incluye descuento</h3>
     <article id="homeschoolTable" class="prices-table">
       <table>
         <thead>

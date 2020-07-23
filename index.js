@@ -1,3 +1,7 @@
+/* Navbar and Navbar links */
+const navbar = document.querySelector('#navbar');
+const links = document.querySelectorAll('.navbar-element');
+
 /* What is Brillamont On Demand section page selection buttons */
 const wibHomeschool = document.querySelector('#wibHomeschool');
 const wibHomegroups = document.querySelector('#wibHomegroups');
@@ -14,6 +18,8 @@ const duesHomegroups = document.querySelector('#duesHomegroups');
 const duesClassic = document.querySelector('#duesClassic');
 
 /* Dues section content */
+const duesPerStudent = document.querySelector('#duesPerStudent');
+const duesDiscount = document.querySelector('#duesDiscount');
 const homeschoolTable = document.querySelector('#homeschoolTable');
 const homegroupsTable = document.querySelector('#homegroupsTable');
 const classicTable = document.querySelector('#classicTable');
@@ -23,8 +29,65 @@ const faqMore = document.querySelectorAll('.more-info');
 const faqLess = document.querySelectorAll('.less-info');
 const faqText = document.querySelectorAll('.faq-box__text');
 
+/* Global variables */
 let descriptionPosition = 0;
 let tablePosition = 0;
+let linkPosition = 0;
+
+/* Navbar functions */
+// for (let index = 0; index < links.length; index++) {
+//   const link = links[index];
+
+//   link.addEventListener('click', function (event) {
+//     switch (index) {
+//       case 0:
+//         linkPosition = 0;
+//         break;
+
+//       case 1:
+//         linkPosition = 1;
+//         break;
+
+//       case 2:
+//         linkPosition = 2;
+//         break;
+
+//       case 3:
+//         linkPosition = 3;
+//         break;
+
+//       default:
+//         break;
+//     }
+
+//     if (index === 1 && linkPosition === 1) {
+//       links[1].classList.add('link-active');
+//       links[1].parentElement.classList.add('link-selected');
+//     } else {
+//       links[1].classList.remove('link-active');
+//       links[1].parentElement.classList.remove('link-selected');
+//     }
+//     console.log(linkPosition);
+//   });
+// }
+
+// if (linkPosition === position) {
+//   element.target.classList.add('link-active');
+//   element.target.parentElement.classList.add('link-selected');
+// } else {
+//   element.target.classList.remove('link-active');
+//   element.target.parentElement.classList.remove('link-selected');
+// }
+
+window.onscroll = function () {
+  let scrollPosition = document.documentElement.scrollTop;
+
+  if (scrollPosition > 600) {
+    navbar.classList.add('less-navbar');
+  } else {
+    navbar.classList.remove('less-navbar');
+  }
+};
 
 wibHomeschool.addEventListener('click', pageSelected);
 wibHomegroups.addEventListener('click', pageSelected);
@@ -110,5 +173,13 @@ function tableSelection(tablePosition, number, pageName, element) {
   } else {
     pageName.classList.remove('page-selected--blue');
     element.style.display = 'none';
+  }
+
+  if (tablePosition === 2) {
+    duesPerStudent.style.display = 'none';
+    duesDiscount.style.display = 'flex';
+  } else {
+    duesPerStudent.style.display = 'flex';
+    duesDiscount.style.display = 'none';
   }
 }
