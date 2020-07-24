@@ -1,6 +1,9 @@
 /* Navbar and Navbar links */
 const navbar = document.querySelector('#navbar');
 const links = document.querySelectorAll('.navbar-element');
+const linksActive = document.querySelectorAll('.navbar-link');
+const homeButton = document.querySelector('#homeButton');
+const startButton = document.querySelector('#startButton');
 
 /* What is Brillamont On Demand section page selection buttons */
 const wibHomeschool = document.querySelector('#wibHomeschool');
@@ -35,49 +38,56 @@ let tablePosition = 0;
 let linkPosition = 0;
 
 /* Navbar functions */
-// for (let index = 0; index < links.length; index++) {
-//   const link = links[index];
+links.forEach((element, index) => {
+  element.addEventListener('click', (child) => {
+    links.forEach((parte, indice) => {
+      if (index === indice) {
+        parte.classList.add('link-selected');
+      } else {
+        parte.classList.remove('link-selected');
+      }
+    });
+  });
+});
 
-//   link.addEventListener('click', function (event) {
-//     switch (index) {
-//       case 0:
-//         linkPosition = 0;
-//         break;
+linksActive.forEach((element, index) => {
+  element.addEventListener('click', (child) => {
+    linksActive.forEach((parte, indice) => {
+      if (index === indice) {
+        parte.classList.add('link-active');
+      } else {
+        parte.classList.remove('link-active');
+      }
+    });
+  });
+});
 
-//       case 1:
-//         linkPosition = 1;
-//         break;
+homeButton.addEventListener('click', () => {
+  links.forEach((element) => {
+    element.classList.remove('link-selected');
+  });
+  linksActive.forEach((linkActive) => {
+    linkActive.classList.remove('link-active');
+  });
+});
 
-//       case 2:
-//         linkPosition = 2;
-//         break;
+lastLink = links[links.length - 1].addEventListener('click', () => {
+  links.forEach((element) => {
+    element.classList.remove('link-selected');
+  });
+  linksActive.forEach((linkActive) => {
+    linkActive.classList.remove('link-active');
+  });
+});
 
-//       case 3:
-//         linkPosition = 3;
-//         break;
-
-//       default:
-//         break;
-//     }
-
-//     if (index === 1 && linkPosition === 1) {
-//       links[1].classList.add('link-active');
-//       links[1].parentElement.classList.add('link-selected');
-//     } else {
-//       links[1].classList.remove('link-active');
-//       links[1].parentElement.classList.remove('link-selected');
-//     }
-//     console.log(linkPosition);
-//   });
-// }
-
-// if (linkPosition === position) {
-//   element.target.classList.add('link-active');
-//   element.target.parentElement.classList.add('link-selected');
-// } else {
-//   element.target.classList.remove('link-active');
-//   element.target.parentElement.classList.remove('link-selected');
-// }
+startButton.addEventListener('click', () => {
+  links.forEach((element) => {
+    element.classList.remove('link-selected');
+  });
+  linksActive.forEach((linkActive) => {
+    linkActive.classList.remove('link-active');
+  });
+});
 
 window.onscroll = function () {
   let scrollPosition = document.documentElement.scrollTop;
@@ -87,7 +97,24 @@ window.onscroll = function () {
   } else {
     navbar.classList.remove('less-navbar');
   }
+
+  console.log(scrollPosition);
+
+  wereAmI(scrollPosition, 821, 1200, 0);
+  wereAmI(scrollPosition, 1610, 2000, 1);
+  wereAmI(scrollPosition, 3378, 3900, 2);
+  wereAmI(scrollPosition, 4267, 5500, 3);
 };
+
+function wereAmI(scrollPosition, startPosition, endPosition, link) {
+  if (scrollPosition >= startPosition && scrollPosition <= endPosition) {
+    links[link].classList.add('link-selected');
+    linksActive[link].classList.add('link-active');
+  } else {
+    links[link].classList.remove('link-selected');
+    linksActive[link].classList.remove('link-active');
+  }
+}
 
 wibHomeschool.addEventListener('click', pageSelected);
 wibHomegroups.addEventListener('click', pageSelected);
