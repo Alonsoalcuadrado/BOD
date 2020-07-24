@@ -7,13 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
   <title>Brillamont On Demand</title>
 </head>
 
 <body>
 
   <header id="navbar" class="navbar">
-    <nav>
+    <nav class="full-menu">
       <a href="#home"><img class="brand-logo" src="assets/images/logo_small.png"
           alt="Brillamont on demand navbar logo"></a>
       <ul class="navbar-links">
@@ -23,6 +24,11 @@
         <li class="navbar-element"><a class=" navbar-link" href="#faqs">Preguntas frecuentes</a></li>
         <li class="navbar-element"><a class=" navbar-link" href="#starts-now">COMENZAR</a></li>
       </ul>
+    </nav>
+    <nav class="colapsed-menu">
+      <a href="#home"><img class="brand-logo" src="assets/images/logo_small.png"
+          alt="Brillamont on demand navbar logo"></a>
+      <img src="assets/icons/ic_colapsed_menu.svg" alt="Colapsed menu for responsive view">
     </nav>
   </header>
 
@@ -35,16 +41,27 @@
         calidad académica que nos distingue.</p>
       <a class="hero-welcome__button" href="#starts-now">COMENZAR</a>
     </article>
-    <img src="assets/images/hero_main_image.svg" alt="Main image for Brillamont On Demand">
+    <article class="img-container">
+      <img src="assets/images/hero_main_image.svg" alt="Main image for Brillamont On Demand">
+    </article>
   </section>
 
   <section id="what-is-bod" class="what-is-bod">
     <h2 class="section-title">¿Qué es Brillamont On Demand?</h2>
+
     <section class="article-pages">
       <a id="wibHomeschool" class="article-page__title page-selected">Homeschool</a>
       <a id="wibHomegroups" class="article-page__title">Homegroups</a>
       <a id="wibClassicOnline" class="article-page__title">Classic Online</a>
     </section>
+
+    <picture class="what-is-bod-responsive">
+      <img class="what-is-bod__img--responsive" src="assets/images/small_student_boy.png" alt="Student image">
+      <img style="display: none" class="what-is-bod__img--responsive" src="assets/images/small_student_baby.png"
+        alt="Student image">
+      <img style="display: none;" class="what-is-bod__img--responsive" src="assets/images/small_student_girl.png"
+        alt="Student image">
+    </picture>
 
     <section id="hsDescription" class="bod-description-container">
       <article class="bod-description">
@@ -160,6 +177,7 @@
       </article>
       <img class="bod-description__image" src="assets/images/small_student_girl.png" alt="Student image">
     </section>
+
   </section>
 
   <section id="how-it-works" class="how-it-works">
@@ -200,6 +218,7 @@
     <article class="form-container">
       <iframe class="form-container__content" src="https://docs.google.com/forms/d/e/1FAIpQLSc5tFzx_E_aqp0O2NsyxTIXc0C69e8FRqveDXSp_7n0ClQh1A/viewform?embedded=true
     " width="700" height="672">Cargando…</iframe>
+      <a href="" class="responsive-button">COMENZAR</a>
     </article>
   </section>
 
@@ -357,6 +376,11 @@
       </table>
     </article>
     <h4 class="caption">*Cuota mensual por alumno</h4>
+    <article class="responsive-elements">
+      <p class="dues-text__responsive">Descarga todos los detalles de las diferentes opciones de
+        Brillamont On Demand.</p>
+      <a class="responsive-button" href="">DESCARGAR CUOTAS</a>
+    </article>
   </section>
 
   <section id="faqs" class="faqs">
