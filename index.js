@@ -148,11 +148,12 @@ function tableSelection(tablePosition, number, pageName, element) {
 
 /* FAQs methods */
 for (let element = 0; element < faqMoreIcons.length; element++) {
+  const faqBox = faqBoxes[element];
   const moreInfo = faqMoreIcons[element];
   const lessInfo = faqLessIcons[element];
   const text = faqTexts[element];
 
-  moreInfo.addEventListener('click', (event) => {
+  faqBox.addEventListener('click', (event) => {
     moreInfo.style.display = 'none';
     lessInfo.style.display = 'flex';
     text.style.display = 'flex';
@@ -165,6 +166,7 @@ for (let element = 0; element < faqMoreIcons.length; element++) {
       }
     });
 
+    elementToHide(faqMoreIcons, element);
     elementToHide(faqLessIcons, element);
     elementToHide(faqTexts, element);
 
