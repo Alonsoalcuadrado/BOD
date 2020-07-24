@@ -9,6 +9,7 @@ const startButton = document.querySelector('#startButton');
 const wibHomeschool = document.querySelector('#wibHomeschool');
 const wibHomegroups = document.querySelector('#wibHomegroups');
 const wibClassicOnline = document.querySelector('#wibClassicOnline');
+const responsiveImages = document.querySelectorAll('.what-is-bod__img--responsive');
 
 /* What is Brillamont On Demand section content */
 const hsSection = document.querySelector('#hsDescription');
@@ -32,6 +33,10 @@ const faqBoxes = document.querySelectorAll('.faq-box');
 const faqMoreIcons = document.querySelectorAll('.more-info');
 const faqLessIcons = document.querySelectorAll('.less-info');
 const faqTexts = document.querySelectorAll('.faq-box__text');
+
+/* Colapsed menu */
+const openColapsedMenu = document.querySelector('#colapsedMenu');
+const closeColapsedMenu = document.querySelector('#colapsedOptions');
 
 /* Global variables */
 let descriptionPosition = 0;
@@ -115,9 +120,11 @@ function descriptionSelection(descriptionPosition, number, pageName, element) {
   if (descriptionPosition === number) {
     pageName.classList.add('page-selected');
     element.style.display = 'flex';
+    responsiveImages[number].style.display = 'flex';
   } else {
     pageName.classList.remove('page-selected');
     element.style.display = 'none';
+    responsiveImages[number].style.display = 'none';
   }
 }
 
@@ -187,3 +194,12 @@ for (let element = 0; element < faqMoreIcons.length; element++) {
     });
   }
 }
+
+/* Colapsed menu methods */
+colapsedMenu.addEventListener('click', (event) => {
+  colapsedOptions.style.left = '0';
+});
+
+closeColapsedMenu.addEventListener('click', () => {
+  colapsedOptions.style.left = '100%';
+});

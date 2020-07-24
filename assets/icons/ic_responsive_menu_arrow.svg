@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 56.2 (101010) - https://sketch.com -->
+    <title>AE5D7B04-6FB8-4014-8E46-47ECF1235024</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M14.0000001,22.6666667 C13.6586668,22.6666667 13.3173335,22.536 13.0573335,22.276 C12.5360002,21.7546667 12.5360002,20.912 13.0573335,20.3906667 L17.464,15.984 L13.2240002,11.5933334 C12.7133335,11.0626667 12.7280002,10.2186667 13.2573335,9.70800008 C13.7880001,9.19733342 14.6320001,9.21200009 15.1426668,9.74000008 L20.2919999,15.0733334 C20.7973332,15.5973334 20.7906666,16.428 20.2759999,16.9426667 L14.9426668,22.276 C14.6826668,22.536 14.3413335,22.6666667 14.0000001,22.6666667" id="path-1"></path>
+    </defs>
+    <g id="Asset-Artboard-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="27)-Icon/chevron-right">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="🎨-Icon-Сolor" fill="#F39208" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
