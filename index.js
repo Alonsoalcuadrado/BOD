@@ -38,57 +38,6 @@ let tablePosition = 0;
 let linkPosition = 0;
 
 /* Navbar functions */
-links.forEach((element, index) => {
-  element.addEventListener('click', (child) => {
-    links.forEach((parte, indice) => {
-      if (index === indice) {
-        parte.classList.add('link-selected');
-      } else {
-        parte.classList.remove('link-selected');
-      }
-    });
-  });
-});
-
-linksActive.forEach((element, index) => {
-  element.addEventListener('click', (child) => {
-    linksActive.forEach((parte, indice) => {
-      if (index === indice) {
-        parte.classList.add('link-active');
-      } else {
-        parte.classList.remove('link-active');
-      }
-    });
-  });
-});
-
-homeButton.addEventListener('click', () => {
-  links.forEach((element) => {
-    element.classList.remove('link-selected');
-  });
-  linksActive.forEach((linkActive) => {
-    linkActive.classList.remove('link-active');
-  });
-});
-
-lastLink = links[links.length - 1].addEventListener('click', () => {
-  links.forEach((element) => {
-    element.classList.remove('link-selected');
-  });
-  linksActive.forEach((linkActive) => {
-    linkActive.classList.remove('link-active');
-  });
-});
-
-startButton.addEventListener('click', () => {
-  links.forEach((element) => {
-    element.classList.remove('link-selected');
-  });
-  linksActive.forEach((linkActive) => {
-    linkActive.classList.remove('link-active');
-  });
-});
-
 window.onscroll = function () {
   let scrollPosition = document.documentElement.scrollTop;
 
@@ -98,11 +47,9 @@ window.onscroll = function () {
     navbar.classList.remove('less-navbar');
   }
 
-  console.log(scrollPosition);
-
-  wereAmI(scrollPosition, 821, 1200, 0);
-  wereAmI(scrollPosition, 1610, 2000, 1);
-  wereAmI(scrollPosition, 3378, 3900, 2);
+  wereAmI(scrollPosition, 821, 1465, 0);
+  wereAmI(scrollPosition, 1610, 2397, 1);
+  wereAmI(scrollPosition, 3378, 4165, 2);
   wereAmI(scrollPosition, 4267, 5500, 3);
 };
 
