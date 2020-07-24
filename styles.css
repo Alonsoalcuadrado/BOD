@@ -137,6 +137,79 @@ ul.navbar-links > li:hover > a {
   font-weight: 600;
 }
 
+section.colapsed-options {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  padding: 24px 24px 40px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 0.5s;
+}
+
+section.colapsed-options > img {
+  margin-bottom: 60px;
+}
+
+section.colapsed-options ul {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+section.colapsed-options ul li {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+section.colapsed-options ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 0;
+  font-family: var(--main-text);
+  font-size: 28px;
+  line-height: 34px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid var(--orange-bg);
+}
+
+section.colapsed-options article.colapsed-footer {
+  width: 100%;
+  color: white;
+}
+
+section.colapsed-options article.colapsed-footer p {
+  width: 100%;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section.colapsed-options article.colapsed-footer div.social-media__icons {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+section.colapsed-options article.colapsed-footer div.social-media__icons a {
+  margin-right: 14px;
+}
+
+section.colapsed-options article.colapsed-footer p:last-child {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .link-selected {
   border-bottom: 2px solid var(--orange-bg) !important;
 }
@@ -380,7 +453,7 @@ section.starts-now {
   height: 100%;
   padding: var(--default-padding);
   background: url('assets/bg-images/small_triangle.png') no-repeat 5% 12%, url('assets/bg-images/small_diamond.png') no-repeat 98% 9%,
-    url('assets/bg-images/small_mid_ring.png') no-repeat 0 880px, url('assets/bg-images/small_gray_spring.png') no-repeat 96% 98% var(--main-color);
+    url('assets/bg-images/small_gray_spring.png') no-repeat 96% 98% var(--main-color);
 }
 
 section.starts-now article.form-container {
