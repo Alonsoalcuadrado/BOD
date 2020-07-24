@@ -109,6 +109,14 @@
     height: 250px;
   }
 
+  article.hero-welcome a.hero-welcome__button--responsive {
+    display: block;
+  }
+
+  article.hero-welcome a.hero-welcome__button {
+    display: none;
+  }
+
   section.what-is-bod {
     padding: var(--large-padding);
   }

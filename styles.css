@@ -183,7 +183,8 @@ article.hero-welcome p.hero-welcome__text {
   color: #bababa;
 }
 
-article.hero-welcome a.hero-welcome__button {
+article.hero-welcome a.hero-welcome__button,
+article.hero-welcome a.hero-welcome__button--responsive {
   text-decoration: none;
   padding: 12px 40px;
   font-weight: bold;
@@ -193,6 +194,10 @@ article.hero-welcome a.hero-welcome__button {
   background-color: var(--orange-bg);
   border-radius: 10px;
   color: white;
+}
+
+article.hero-welcome a.hero-welcome__button--responsive {
+  display: none;
 }
 
 section.hero > img {
