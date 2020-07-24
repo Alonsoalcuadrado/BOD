@@ -28,14 +28,14 @@ const homegroupsTable = document.querySelector('#homegroupsTable');
 const classicTable = document.querySelector('#classicTable');
 
 /* FAQs section selectors */
-const faqMore = document.querySelectorAll('.more-info');
-const faqLess = document.querySelectorAll('.less-info');
-const faqText = document.querySelectorAll('.faq-box__text');
+const faqBoxes = document.querySelectorAll('.faq-box');
+const faqMoreIcons = document.querySelectorAll('.more-info');
+const faqLessIcons = document.querySelectorAll('.less-info');
+const faqTexts = document.querySelectorAll('.faq-box__text');
 
 /* Global variables */
 let descriptionPosition = 0;
 let tablePosition = 0;
-let linkPosition = 0;
 
 /* Navbar functions */
 window.onscroll = function () {
@@ -47,10 +47,10 @@ window.onscroll = function () {
     navbar.classList.remove('less-navbar');
   }
 
-  wereAmI(scrollPosition, 821, 1465, 0);
-  wereAmI(scrollPosition, 1610, 2397, 1);
-  wereAmI(scrollPosition, 3378, 4165, 2);
-  wereAmI(scrollPosition, 4267, 5500, 3);
+  wereAmI(scrollPosition, 700, 1400, 0);
+  wereAmI(scrollPosition, 1500, 2300, 1);
+  wereAmI(scrollPosition, 3300, 4100, 2);
+  wereAmI(scrollPosition, 4200, 5800, 3);
 };
 
 function wereAmI(scrollPosition, startPosition, endPosition, link) {
@@ -63,6 +63,7 @@ function wereAmI(scrollPosition, startPosition, endPosition, link) {
   }
 }
 
+/* What id BOD and dues pages methods */
 wibHomeschool.addEventListener('click', pageSelected);
 wibHomegroups.addEventListener('click', pageSelected);
 wibClassicOnline.addEventListener('click', pageSelected);
@@ -70,26 +71,6 @@ wibClassicOnline.addEventListener('click', pageSelected);
 duesHomeschool.addEventListener('click', pageSelected);
 duesHomegroups.addEventListener('click', pageSelected);
 duesClassic.addEventListener('click', pageSelected);
-
-for (let element = 0; element < faqMore.length; element++) {
-  const moreInfo = faqMore[element];
-  const lessInfo = faqLess[element];
-  const text = faqText[element];
-
-  moreInfo.addEventListener('click', (event) => {
-    moreInfo.style.display = 'none';
-    lessInfo.style.display = 'flex';
-    text.style.display = 'flex';
-    event.path[2].classList.add('box-uncollapsed');
-  });
-
-  lessInfo.addEventListener('click', (event) => {
-    moreInfo.style.display = 'flex';
-    lessInfo.style.display = 'none';
-    text.style.display = 'none';
-    event.path[2].classList.remove('box-uncollapsed');
-  });
-}
 
 function pageSelected(event) {
   switch (event.target.id) {
@@ -155,5 +136,54 @@ function tableSelection(tablePosition, number, pageName, element) {
   } else {
     duesPerStudent.style.display = 'flex';
     duesDiscount.style.display = 'none';
+  }
+}
+
+/* FAQs methods */
+for (let element = 0; element < faqMoreIcons.length; element++) {
+  const moreInfo = faqMoreIcons[element];
+  const lessInfo = faqLessIcons[element];
+  const text = faqTexts[element];
+
+  moreInfo.addEventListener('click', (event) => {
+    moreInfo.style.display = 'none';
+    lessInfo.style.display = 'flex';
+    text.style.display = 'flex';
+
+    faqBoxes.forEach((faqBox, index) => {
+      if (index !== element) {
+        faqBox.classList.remove('box-uncollapsed');
+      } else {
+        faqBox.classList.add('box-uncollapsed');
+      }
+    });
+
+    elementToHide(faqLessIcons, element);
+    elementToHide(faqTexts, element);
+
+    faqMoreIcons.forEach((faqMoreIcon, index) => {
+      if (index !== element) {
+        faqMoreIcon.style.display = 'flex';
+      } else {
+        faqMoreIcon.style.display = 'none';
+      }
+    });
+  });
+
+  lessInfo.addEventListener('click', (event) => {
+    moreInfo.style.display = 'flex';
+    lessInfo.style.display = 'none';
+    text.style.display = 'none';
+    event.path[2].classList.remove('box-uncollapsed');
+  });
+
+  function elementToHide(array, parentIndex) {
+    array.forEach((element, index) => {
+      if (index !== parentIndex) {
+        element.style.display = 'none';
+      } else {
+        element.style.display = 'flex';
+      }
+    });
   }
 }
