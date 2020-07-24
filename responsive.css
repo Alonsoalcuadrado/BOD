@@ -1,5 +1,6 @@
 :root {
   --large-padding: 7.5% 5.9%;
+  --small-padding: 18.9% 5.7%;
 }
 
 @media (max-width: 1140px) {
@@ -79,7 +80,7 @@
     align-items: center;
     grid-template-rows: repeat(2, 1fr);
     padding: 150px 5.9% 7.5%;
-    background: url('assets/bg-images/small_spring.png') 0 195px no-repeat,
+    background: url('assets/bg-images/small_spring.png') 0 100px no-repeat,
       url('assets/bg-images/small_tube.png') var(--main-color) 100% 200px no-repeat;
   }
 
@@ -109,15 +110,10 @@
   }
 
   section.what-is-bod {
-    display: grid;
-    align-items: center;
-    grid-template-rows: 10% 13% 50% 1;
-    grid-gap: 24px;
     padding: var(--large-padding);
   }
 
   section.article-pages {
-    grid-row: 2;
     justify-content: center;
   }
 
@@ -126,9 +122,10 @@
   }
 
   section.what-is-bod picture.what-is-bod-responsive {
-    grid-row: 3;
-    justify-content: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
   }
 
   section.what-is-bod picture.what-is-bod-responsive img {
@@ -136,7 +133,6 @@
   }
 
   section.what-is-bod section.bod-description-container article.bod-description {
-    grid-row: 4;
     width: 100%;
   }
 
@@ -170,8 +166,7 @@
   }
 
   section.starts-now {
-    background: url('assets/bg-images/small_triangle.png') no-repeat 5% 12%, url('assets/bg-images/small_diamond.png') no-repeat 98% 9%,
-      url('assets/bg-images/small_mid_ring.png') no-repeat 0 815px, url('assets/bg-images/small_gray_spring.png') no-repeat 96% 98% var(--main-color);
+    background: url('assets/bg-images/small_gray_spring.png') no-repeat 110% 80% var(--main-color);
   }
 
   section.starts-now article.form-container iframe.form-container__content {
@@ -237,21 +232,244 @@
   }
 }
 
-@media (max-width: 425px) {
-  header.navbar {
+@media (max-width: 590px) {
+  section h2.section-title {
     width: 100%;
-    margin: 0;
+    margin-bottom: 32px;
     padding: 0;
-    background-color: pink;
+    font-size: 28px;
+    line-height: 32px;
   }
-  header.navbar nav.colapsed-menu {
+
+  section.doubts h2.section-title--doubts {
+    margin-bottom: 40px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  header.navbar {
     margin: 0;
-    padding: 0;
-    background-color: red;
+    padding: 0 5.7%;
   }
 
   section.hero {
-    width: 100%;
-    background-color: yellow;
+    padding-top: 150px;
+    background: url('assets/bg-images/responsive_spring.png') no-repeat 0 115px,
+      url('assets/bg-images/responsive_tube.png') no-repeat 100% 150px var(--main-color);
   }
+
+  article.hero-welcome h1.hero-welcome__title {
+    width: 100%;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  article.hero-welcome p.hero-welcome__text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  section.what-is-bod {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  picture.what-is-bod-responsive {
+    margin: 64px 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  section.what-is-bod section.article-pages {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  section.what-is-bod section.article-pages a {
+    padding: 14px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  section.what-is-bod section.bod-description-container {
+    width: 100%;
+    padding: 32px 24px;
+  }
+
+  section.bod-description-container article.bod-description section.bod-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  section.how-it-works {
+    margin: 0;
+    padding: 0;
+    background: var(--main-color);
+  }
+
+  .title-center {
+    padding: 0 !important;
+  }
+
+  section.how-it-works section.steps-container article.step {
+    width: 100%;
+    padding: 32px 24px;
+    border-top: none;
+  }
+
+  section.how-it-works section.steps-container article.step:first-child {
+    width: 100%;
+    padding: 32px 24px;
+    border-top: none;
+    border-top: 4px solid var(--orange-light);
+  }
+
+  section.starts-now {
+    margin: 0;
+    padding: var(--small-padding);
+    background: url('assets/bg-images/small_gray_spring.png') no-repeat 135% 80% var(--main-color);
+  }
+
+  section.dues {
+    margin: 0;
+    padding: var(--small-padding);
+  }
+
+  section.dues p.dues-text__responsive {
+    width: 80%;
+  }
+
+  section.faqs {
+    margin: 0;
+    padding: var(--small-padding);
+  }
+
+  section.doubts {
+    margin: 0;
+    padding: var(--small-padding);
+    background: var(--main-color);
+  }
+
+  footer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-self: center;
+    margin: 0;
+    padding: var(--small-padding);
+  }
+
+  footer section.social-media {
+    grid-row: 1;
+    align-items: center;
+  }
+
+  footer section.social-media p {
+    margin-bottom: 40px;
+  }
+
+  footer section.social-media div.social-media__icons {
+    margin-bottom: 20px;
+  }
+
+  footer section.social-media div.social-media__icons a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  footer section.brand {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer section.brand img {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  section.hero {
+    margin: 0;
+    padding: 150px 0 80px 0;
+  }
+
+  section.what-is-bod picture.what-is-bod-responsive img {
+    width: 250px;
+  }
+
+  section.what-is-bod section.article-pages a {
+    padding: 14px 5px;
+  }
+
+  section.bod-description-container article.bod-description section.bod-benefits {
+    grid-gap: 60px;
+  }
+}
+
+@media (max-width: 320px) {
+  section.hero article.img-container img {
+    width: 250px;
+  }
+
+  article.hero-welcome h1.hero-welcome__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  article.hero-welcome p.hero-welcome__text {
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  section.what-is-bod picture.what-is-bod-responsive img {
+    width: 200px;
+  }
+
+  section.what-is-bod section.article-pages a {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 14px 4px;
+  }
+
+  /* section.what-is-bod {
+    margin: 0;
+    padding: 0;
+  } */
+
+  /* section.how-it-works {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.starts-now {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.dues {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.faqs {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.doubts {
+    margin: 0;
+    padding: 0;
+  }
+
+  footer {
+    margin: 0;
+    padding: 0;
+  } */
 }
