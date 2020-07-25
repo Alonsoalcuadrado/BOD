@@ -33,6 +33,7 @@ const faqBoxes = document.querySelectorAll('.faq-box');
 const faqMoreIcons = document.querySelectorAll('.more-info');
 const faqLessIcons = document.querySelectorAll('.less-info');
 const faqTexts = document.querySelectorAll('.faq-box__text');
+const cards = document.querySelectorAll('#faqs article');
 
 /* Colapsed menu */
 const openColapsedMenu = document.querySelector('#colapsedMenu');
@@ -147,54 +148,62 @@ function tableSelection(tablePosition, number, pageName, element) {
 }
 
 /* FAQs methods */
-for (let element = 0; element < faqMoreIcons.length; element++) {
-  const faqBox = faqBoxes[element];
-  const moreInfo = faqMoreIcons[element];
-  const lessInfo = faqLessIcons[element];
-  const text = faqTexts[element];
+for (let position = 0; position < faqMoreIcons.length; position++) {
+  const faqBox = faqBoxes[position];
+  const moreInfo = faqMoreIcons[position];
+  const lessInfo = faqLessIcons[position];
+  const text = faqTexts[position];
 
-  faqBox.addEventListener('click', (event) => {
+  faqBox.addEventListener('mousedown', (event) => {
     moreInfo.style.display = 'none';
     lessInfo.style.display = 'flex';
     text.style.display = 'flex';
 
     faqBoxes.forEach((faqBox, index) => {
-      if (index !== element) {
+      if (index !== position) {
         faqBox.classList.remove('box-uncollapsed');
       } else {
         faqBox.classList.add('box-uncollapsed');
       }
     });
 
-    elementToHide(faqMoreIcons, element);
-    elementToHide(faqLessIcons, element);
-    elementToHide(faqTexts, element);
+    elementToHide(faqMoreIcons, position);
+    elementToHide(faqLessIcons, position);
+    elementToHide(faqTexts, position);
 
     faqMoreIcons.forEach((faqMoreIcon, index) => {
-      if (index !== element) {
+      if (index !== position) {
         faqMoreIcon.style.display = 'flex';
       } else {
         faqMoreIcon.style.display = 'none';
       }
     });
-  });
-
-  lessInfo.addEventListener('click', (event) => {
-    moreInfo.style.display = 'flex';
-    lessInfo.style.display = 'none';
-    text.style.display = 'none';
-    event.path[2].classList.remove('box-uncollapsed');
-  });
-
-  function elementToHide(array, parentIndex) {
-    array.forEach((element, index) => {
-      if (index !== parentIndex) {
-        element.style.display = 'none';
-      } else {
-        element.style.display = 'flex';
-      }
+    cards.forEach((card) => {
+      card.addEventListener('mousedown', () => {
+        if (card.classList[1] === 'box-uncollapsed') {
+          faqBox.classList.remove('box-uncollapsed');
+          moreInfo.style.display = 'flex';
+          lessInfo.style.display = 'none';
+          text.style.display = 'none';
+        } else {
+          faqBox.classList.add('box-uncollapsed');
+          moreInfo.style.display = 'none';
+          lessInfo.style.display = 'flex';
+          text.style.display = 'flex';
+        }
+      });
     });
-  }
+  });
+}
+
+function elementToHide(array, parentIndex) {
+  array.forEach((element, index) => {
+    if (index !== parentIndex) {
+      element.style.display = 'none';
+    } else {
+      element.style.display = 'flex';
+    }
+  });
 }
 
 /* Colapsed menu methods */
