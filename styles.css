@@ -128,13 +128,17 @@ ul.navbar-links > li:last-child > a {
   align-items: center;
   justify-content: center;
   padding: 12px 18px;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: 10px;
   background-color: var(--orange-bg);
 }
 
-ul.navbar-links > li:hover > a {
-  font-weight: 600;
+ul.navbar-links li:last-child a:hover {
+  background-color: #f9a939;
+}
+
+ul.navbar-links li:last-child a:focus {
+  background-color: #da8207;
 }
 
 section.colapsed-options {
@@ -267,6 +271,16 @@ article.hero-welcome a.hero-welcome__button--responsive {
   background-color: var(--orange-bg);
   border-radius: 10px;
   color: white;
+}
+
+article.hero-welcome a.hero-welcome__button:hover,
+article.hero-welcome a.hero-welcome__button--responsive:hover {
+  background-color: #f9a939;
+}
+
+article.hero-welcome a.hero-welcome__button:focus,
+article.hero-welcome a.hero-welcome__button--responsive:focus {
+  background-color: #da8207;
 }
 
 article.hero-welcome a.hero-welcome__button--responsive {
@@ -541,6 +555,10 @@ article.prices-table table th {
   padding-left: 32px;
 }
 
+article.prices-table table thead tr th {
+  font-weight: 500;
+}
+
 article.prices-table table td:first-child {
   font-weight: 500;
   text-transform: uppercase;
@@ -582,6 +600,7 @@ section.faqs article.faq-box {
   height: 100%;
   border-radius: 10px;
   background-color: var(--orange-bg);
+  cursor: pointer;
 }
 
 section.faqs article.faq-box h3.faq-box__title {
@@ -606,14 +625,14 @@ section.faqs article.faq-box p.faq-box__text {
 
 .faq-box-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
 
 .box-uncollapsed__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
