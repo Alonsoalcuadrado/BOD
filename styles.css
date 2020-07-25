@@ -625,14 +625,14 @@ section.faqs article.faq-box p.faq-box__text {
 
 .faq-box-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
 
 .box-uncollapsed__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }

@@ -29,11 +29,10 @@ const homegroupsTable = document.querySelector('#homegroupsTable');
 const classicTable = document.querySelector('#classicTable');
 
 /* FAQs section selectors */
-const faqBoxes = document.querySelectorAll('.faq-box');
+const cards = document.querySelectorAll('#faqs article');
 const faqMoreIcons = document.querySelectorAll('.more-info');
 const faqLessIcons = document.querySelectorAll('.less-info');
 const faqTexts = document.querySelectorAll('.faq-box__text');
-const cards = document.querySelectorAll('#faqs article');
 
 /* Colapsed menu */
 const openColapsedMenu = document.querySelector('#colapsedMenu');
@@ -148,53 +147,36 @@ function tableSelection(tablePosition, number, pageName, element) {
 }
 
 /* FAQs methods */
-for (let position = 0; position < faqMoreIcons.length; position++) {
-  const faqBox = faqBoxes[position];
-  const moreInfo = faqMoreIcons[position];
-  const lessInfo = faqLessIcons[position];
-  const text = faqTexts[position];
-
-  faqBox.addEventListener('mousedown', (event) => {
-    moreInfo.style.display = 'none';
-    lessInfo.style.display = 'flex';
-    text.style.display = 'flex';
-
-    faqBoxes.forEach((faqBox, index) => {
-      if (index !== position) {
-        faqBox.classList.remove('box-uncollapsed');
-      } else {
-        faqBox.classList.add('box-uncollapsed');
-      }
-    });
-
-    elementToHide(faqMoreIcons, position);
-    elementToHide(faqLessIcons, position);
-    elementToHide(faqTexts, position);
-
-    faqMoreIcons.forEach((faqMoreIcon, index) => {
-      if (index !== position) {
-        faqMoreIcon.style.display = 'flex';
-      } else {
-        faqMoreIcon.style.display = 'none';
-      }
-    });
-    cards.forEach((card) => {
-      card.addEventListener('mousedown', () => {
-        if (card.classList[1] === 'box-uncollapsed') {
-          faqBox.classList.remove('box-uncollapsed');
-          moreInfo.style.display = 'flex';
-          lessInfo.style.display = 'none';
-          text.style.display = 'none';
+cards.forEach((card, position) => {
+  card.addEventListener('click', () => {
+    if (card.classList[1] !== 'box-uncollapsed') {
+      cards.forEach((innerCard, index) => {
+        if (index === position) {
+          innerCard.classList.add('box-uncollapsed');
         } else {
-          faqBox.classList.add('box-uncollapsed');
-          moreInfo.style.display = 'none';
-          lessInfo.style.display = 'flex';
-          text.style.display = 'flex';
+          innerCard.classList.remove('box-uncollapsed');
         }
       });
-    });
+
+      elementToHide(faqMoreIcons, position);
+      elementToHide(faqLessIcons, position);
+      elementToHide(faqTexts, position);
+
+      faqMoreIcons.forEach((faqMoreIcon, index) => {
+        if (index !== position) {
+          faqMoreIcon.style.display = 'flex';
+        } else {
+          faqMoreIcon.style.display = 'none';
+        }
+      });
+    } else {
+      card.classList.remove('box-uncollapsed');
+      faqLessIcons[position].style.display = 'none';
+      faqMoreIcons[position].style.display = 'flex';
+      faqTexts[position].style.display = 'none';
+    }
   });
-}
+});
 
 function elementToHide(array, parentIndex) {
   array.forEach((element, index) => {

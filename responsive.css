@@ -9,6 +9,7 @@
   }
 
   section.hero {
+    height: 100%;
     padding: 250px 60px 80px;
     background: url(assets/bg-images/small_spring.png) 0 195px no-repeat, url(assets/bg-images/small_ring.png) 59% 472px no-repeat,
       url(assets/bg-images/small_tube.png) var(--main-color) 100% 200px no-repeat;
