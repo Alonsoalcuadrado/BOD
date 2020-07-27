@@ -3,7 +3,7 @@
   --small-padding: 18.9% 5.7%;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1280px) {
   header.navbar {
     padding: 0 60px;
   }
@@ -27,11 +27,7 @@
 
   section.how-it-works {
     margin-left: 0;
-    padding: 90px 0;
-  }
-
-  section.how-it-works section.steps-container {
-    margin-left: -128px;
+    padding: var(--small-padding) 7.5% 0;
   }
 
   section.how-it-works section.steps-container article.step {
@@ -71,7 +67,54 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1142px) {
+  section.dues section.article-pages {
+    display: none;
+  }
+
+  section.dues h3.section-subtitle {
+    display: none;
+  }
+
+  section.dues article.prices-table {
+    display: none !important;
+  }
+
+  section.dues h4.caption {
+    display: none;
+  }
+
+  section.dues article.responsive-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.dues p.dues-text__responsive {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    width: 50%;
+  }
+
+  section.dues a.responsive-button {
+    display: block;
+    padding: 18px 40px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--main-color);
+  }
+}
+
+@media (max-width: 1026px) {
   header.navbar nav.full-menu {
     display: none;
   }
@@ -207,51 +250,6 @@
     text-decoration: none;
     border-radius: 10px;
     background-color: var(--orange-bg);
-  }
-
-  section.dues section.article-pages {
-    display: none;
-  }
-
-  section.dues h3.section-subtitle {
-    display: none;
-  }
-
-  section.dues article.prices-table {
-    display: none;
-  }
-
-  section.dues h4.caption {
-    display: none;
-  }
-
-  section.dues article.responsive-elements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section.dues p.dues-text__responsive {
-    margin-bottom: 40px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: white;
-    width: 50%;
-  }
-
-  section.dues a.responsive-button {
-    display: block;
-    padding: 18px 40px;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    background-color: var(--main-color);
   }
 }
 

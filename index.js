@@ -183,7 +183,7 @@ function elementToHide(array, parentIndex) {
     if (index !== parentIndex) {
       element.style.display = 'none';
     } else {
-      element.style.display = 'flex';
+      element.style.display = 'block';
     }
   });
 }
