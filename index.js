@@ -7,7 +7,7 @@ const startButton = document.querySelector('#startButton');
 
 /* What is Brillamont On Demand section page selection buttons */
 const wibHomeschool = document.querySelector('#wibHomeschool');
-const wibHomegroups = document.querySelector('#wibHomegroups');
+// const wibHomegroups = document.querySelector('#wibHomegroups');
 const wibClassicOnline = document.querySelector('#wibClassicOnline');
 const responsiveImages = document.querySelectorAll('.what-is-bod__img--responsive');
 
@@ -18,7 +18,7 @@ const coSection = document.querySelector('#coDescription');
 
 /* Dues section page selection buttons */
 const duesHomeschool = document.querySelector('#duesHomeschool');
-const duesHomegroups = document.querySelector('#duesHomegroups');
+// const duesHomegroups = document.querySelector('#duesHomegroups');
 const duesClassic = document.querySelector('#duesClassic');
 
 /* Dues section content */
@@ -70,11 +70,11 @@ function wereAmI(scrollPosition, startPosition, endPosition, link) {
 
 /* What id BOD and dues pages methods */
 wibHomeschool.addEventListener('click', pageSelected);
-wibHomegroups.addEventListener('click', pageSelected);
+// wibHomegroups.addEventListener('click', pageSelected);
 wibClassicOnline.addEventListener('click', pageSelected);
 
 duesHomeschool.addEventListener('click', pageSelected);
-duesHomegroups.addEventListener('click', pageSelected);
+// duesHomegroups.addEventListener('click', pageSelected);
 duesClassic.addEventListener('click', pageSelected);
 
 function pageSelected(event) {
@@ -83,10 +83,10 @@ function pageSelected(event) {
       descriptionPosition = 0;
 
       break;
-    case 'wibHomegroups':
-      descriptionPosition = 1;
+    // case 'wibHomegroups':
+    //   descriptionPosition = 1;
 
-      break;
+    //   break;
     case 'wibClassicOnline':
       descriptionPosition = 2;
 
@@ -95,10 +95,10 @@ function pageSelected(event) {
       tablePosition = 0;
 
       break;
-    case 'duesHomegroups':
-      tablePosition = 1;
+    // case 'duesHomegroups':
+    //   tablePosition = 1;
 
-      break;
+    //   break;
     case 'duesClassic':
       tablePosition = 2;
 
@@ -109,10 +109,10 @@ function pageSelected(event) {
   }
 
   descriptionSelection(descriptionPosition, 0, wibHomeschool, hsSection);
-  descriptionSelection(descriptionPosition, 1, wibHomegroups, hgSection);
+  // descriptionSelection(descriptionPosition, 1, wibHomegroups, hgSection);
   descriptionSelection(descriptionPosition, 2, wibClassicOnline, coSection);
   tableSelection(tablePosition, 0, duesHomeschool, homeschoolTable);
-  tableSelection(tablePosition, 1, duesHomegroups, homegroupsTable);
+  // tableSelection(tablePosition, 1, duesHomegroups, homegroupsTable);
   tableSelection(tablePosition, 2, duesClassic, classicTable);
 }
 
